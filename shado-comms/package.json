@@ -1,0 +1,42 @@
+{
+  "name": "@shado-network/shado-comms",
+  "description": "Shadō Network's intra-communication utility.",
+  "keywords": [],
+  "version": "0.0.1",
+  "author": "Shadō Network",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsup ./src",
+    "watch": "tsup ./src --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.1.0",
+    "fastify": "^5.2.1",
+    "uuid": "^11.1.0",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.14",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
+}
