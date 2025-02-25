@@ -1,0 +1,7 @@
+*
+
+!dist/**
+!package.json
+!tsup.config.ts
+
+!README.md

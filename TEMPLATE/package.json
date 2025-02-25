@@ -1,0 +1,36 @@
+{
+  "name": "@shado-network/TEMPLATE",
+  "description": "Template plugin for Shadō Network packages.",
+  "keywords": [],
+  "version": "0.0.1",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsup ./src",
+    "watch": "tsup ./src --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
+}
