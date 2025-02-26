@@ -97,16 +97,6 @@ var TwitterApiClient = class {
     this._puppet = _puppet;
     this.config = __spreadValues(__spreadValues({}, this.config), config);
     this.secrets = __spreadValues(__spreadValues({}, this.secrets), secrets);
-    this._context.logger.send({
-      type: "SUCCESS",
-      origin: {
-        type: "PUPPET",
-        id: this._puppet.id
-      },
-      data: {
-        message: `Loaded client plugin "client-twitter-api"`
-      }
-    });
   }
 };
 TwitterApiClient.metadata = {

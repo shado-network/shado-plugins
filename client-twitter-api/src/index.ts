@@ -57,16 +57,16 @@ class TwitterApiClient {
       ...secrets,
     }
 
-    this._context.logger.send({
-      type: 'SUCCESS',
-      origin: {
-        type: 'PUPPET',
-        id: this._puppet.id,
-      },
-      data: {
-        message: `Loaded client plugin "client-twitter-api"`,
-      },
-    })
+    // this._context.logger.send({
+    //   type: 'SUCCESS',
+    //   origin: {
+    //     type: 'PUPPET',
+    //     id: this._puppet.id,
+    //   },
+    //   data: {
+    //     message: `Loaded client plugin "client-twitter-api"`,
+    //   },
+    // })
   }
 
   login = async () => {
