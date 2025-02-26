@@ -73,6 +73,7 @@ var AnthropicAdapter = class {
 AnthropicAdapter.metadata = {
   identifier: "adapter-anthropic",
   description: "Wrapper for Anthropic Claude interaction through LangChain.",
+  //
   key: "model"
 };
 var index_default = AnthropicAdapter;

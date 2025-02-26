@@ -9,6 +9,7 @@ class OpenAiAdapter {
   static metadata = {
     identifier: 'adapter-openai',
     description: 'Wrapper for OpenAI interaction through LangChain.',
+    //
     key: 'model',
   }
 

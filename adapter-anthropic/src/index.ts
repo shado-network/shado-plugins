@@ -10,6 +10,7 @@ class AnthropicAdapter {
   static metadata = {
     identifier: 'adapter-anthropic',
     description: 'Wrapper for Anthropic Claude interaction through LangChain.',
+    //
     key: 'model',
   }
 

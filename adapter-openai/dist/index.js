@@ -73,6 +73,7 @@ var OpenAiAdapter = class {
 OpenAiAdapter.metadata = {
   identifier: "adapter-openai",
   description: "Wrapper for OpenAI interaction through LangChain.",
+  //
   key: "model"
 };
 var index_default = OpenAiAdapter;

@@ -9,6 +9,7 @@ class DeepSeekAdapter {
   static metadata = {
     identifier: 'adapter-deepseek',
     description: 'Wrapper for DeepSeek interaction through LangChain.',
+    //
     key: 'model',
   }
 

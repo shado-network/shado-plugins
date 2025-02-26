@@ -74,6 +74,7 @@ var DeepSeekAdapter = class {
 DeepSeekAdapter.metadata = {
   identifier: "adapter-deepseek",
   description: "Wrapper for DeepSeek interaction through LangChain.",
+  //
   key: "model"
 };
 var index_default = DeepSeekAdapter;
