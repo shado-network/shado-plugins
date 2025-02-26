@@ -38,6 +38,7 @@ var __async = (__this, __arguments, generator) => {
 // src/index.ts
 import { Telegraf } from "telegraf";
 import { message } from "telegraf/filters";
+import { fmt, code } from "telegraf/format";
 var TelegramClient = class {
   constructor(config, secrets, _puppet, _context) {
     this.config = {
@@ -138,5 +139,7 @@ TelegramClient.metadata = {
 };
 var index_default = TelegramClient;
 export {
-  index_default as default
+  code,
+  index_default as default,
+  fmt
 };

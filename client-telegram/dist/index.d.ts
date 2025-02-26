@@ -1,5 +1,6 @@
 import { Telegraf } from 'telegraf';
 import { FmtString } from 'telegraf/format';
+export { code, fmt } from 'telegraf/format';
 import { TelegramMessage } from './types/telegram.js';
 
 declare class TelegramClient {
@@ -12,6 +13,7 @@ declare class TelegramClient {
     secrets: {
         botHandle?: string;
         botToken?: string;
+        chatId?: string;
     };
     client: undefined | Telegraf;
     threads: string[];
@@ -21,6 +23,7 @@ declare class TelegramClient {
     constructor(config: {}, secrets: {
         botHandle: string;
         botToken: string;
+        chatId?: string;
     }, _puppet: any, _context: any);
     _init: () => Promise<void>;
     _storeMessage: (ctx: any) => Promise<TelegramMessage>;

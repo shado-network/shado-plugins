@@ -1,5 +1,6 @@
 import { Telegraf } from 'telegraf'
 import { message } from 'telegraf/filters'
+import { fmt, code } from 'telegraf/format'
 import type { FmtString } from 'telegraf/format'
 
 // import type { AppContext } from '@core/context/types'
@@ -21,6 +22,7 @@ class TelegramClient {
   secrets: {
     botHandle?: string
     botToken?: string
+    chatId?: string
   } = {}
 
   //
@@ -40,6 +42,7 @@ class TelegramClient {
     secrets: {
       botHandle: string
       botToken: string
+      chatId?: string
     },
     _puppet: any,
     _context: any,
@@ -152,3 +155,4 @@ class TelegramClient {
 }
 
 export default TelegramClient
+export { fmt, code }
