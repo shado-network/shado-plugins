@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@langchain/anthropic": "^0.3.14",
-    "@langchain/core": "^0.3.40"
+    "@langchain/core": "^0.3.40",
+    "langchain": "^0.3.19"
   },
   "devDependencies": {
     "tsup": "^8.3.6",
