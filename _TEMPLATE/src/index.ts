@@ -1,12 +1,11 @@
 class TEMPLATE {
-  constructor() {}
-
-  info = () => {
-    return {
-      identifier: 'TEMPLATE',
-      description: 'Template plugin for Shadō Network packages.',
-    }
+  static metadata = {
+    identifier: 'TEMPLATE',
+    description: 'Template plugin for Shadō Network packages.',
+    key: 'XYZ',
   }
+
+  constructor() {}
 }
 
 export default TEMPLATE
