@@ -235,7 +235,7 @@ class ShadoComms {
 
   _addWebSocketEvents = () => {
     // NOTE: From puppet planner plugin.
-    this._puppet.runtime.events.on('planner', (payload: WebSocketResponse) => {
+    this._puppet.events.on('planner', (payload: WebSocketResponse) => {
       // console.log('!!!', payload)
       broadcast(this.wsConnections, JSON.stringify(payload), false)
     })

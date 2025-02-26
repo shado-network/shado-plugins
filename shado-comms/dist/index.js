@@ -146,7 +146,7 @@ var ShadoComms = class {
       }));
     };
     this._addWebSocketEvents = () => {
-      this._puppet.runtime.events.on("planner", (payload) => {
+      this._puppet.events.on("planner", (payload) => {
         broadcast(this.wsConnections, JSON.stringify(payload), false);
       });
     };
