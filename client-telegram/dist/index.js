@@ -40,6 +40,7 @@ import { Telegraf } from "telegraf";
 import { message } from "telegraf/filters";
 import { fmt, code } from "telegraf/format";
 var TelegramClient = class {
+  // | PuppetContext
   constructor(config, secrets, _puppet, _context) {
     this.config = {
       // SECONDS_PER_CHAR: 0.0125,
@@ -117,7 +118,7 @@ var TelegramClient = class {
     try {
       this.client = new Telegraf(this.secrets.botToken || "UNDEFINED");
     } catch (error) {
-      this._context.logger.send({
+      this._context.utils.logger.send({
         type: "ERROR",
         origin: {
           type: "PUPPET",

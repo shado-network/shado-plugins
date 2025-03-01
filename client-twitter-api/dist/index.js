@@ -38,6 +38,7 @@ var __async = (__this, __arguments, generator) => {
 // src/index.ts
 import { TwitterApi } from "twitter-api-v2";
 var TwitterApiClient = class {
+  // | PuppetContext
   constructor(config, secrets, _puppet, _context) {
     this.config = {};
     this.secrets = {};
@@ -55,7 +56,7 @@ var TwitterApiClient = class {
         this.client = new TwitterApi(credentials, settings);
         return true;
       } catch (error) {
-        this._context.logger.send({
+        this._context.utils.logger.send({
           type: "ERROR",
           origin: {
             type: "PUPPET",

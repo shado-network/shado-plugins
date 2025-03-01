@@ -39,6 +39,7 @@ var __async = (__this, __arguments, generator) => {
 import TelegramClient from "@shado-network/client-telegram";
 import { fmt, code } from "@shado-network/client-telegram";
 var SandboxTelegramClient = class {
+  // | PuppetContext
   constructor(config, secrets, _context) {
     this.config = {};
     this._init = () => __async(this, null, function* () {
@@ -60,7 +61,7 @@ var SandboxTelegramClient = class {
           sandboxContext
         );
       } catch (error) {
-        this._context.logger.send({
+        this._context.utils.logger.send({
           type: "ERROR",
           origin: {
             type: "SERVER"
@@ -95,6 +96,7 @@ var SandboxTelegramClient = class {
 
 // src/index.ts
 var ShadoSandboxPlugin = class {
+  // | PuppetContext
   constructor(clientIdentifiers, secrets, _context) {
     this.config = {};
     this.clients = [];
@@ -104,7 +106,7 @@ var ShadoSandboxPlugin = class {
           case "shado-screen":
             break;
           case "logger":
-            this.clients.push(this._context.logger);
+            this.clients.push(this._context.utils.logger);
             break;
           case "telegram":
             this.clients.push(
@@ -122,7 +124,7 @@ var ShadoSandboxPlugin = class {
     this.secrets = __spreadValues({}, secrets);
     this._context = _context;
     this._setClients(clientIdentifiers);
-    this._context.logger.send({
+    this._context.utils.logger.send({
       type: "SUCCESS",
       origin: {
         type: "PLUGIN"

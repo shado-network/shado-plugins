@@ -24,7 +24,8 @@ declare class TelegramClient {
         botHandle: string;
         botToken: string;
         chatId?: string;
-    }, _puppet: any, _context: any);
+    }, _puppet: any, // | ShadoPuppet,
+    _context: any);
     _init: () => Promise<void>;
     _storeMessage: (ctx: any) => Promise<TelegramMessage>;
     getMessageThreads: () => string[];
@@ -36,4 +37,4 @@ declare class TelegramClient {
     markAsRead: (messageId: number) => Promise<void>;
 }
 
-export { TelegramClient as default };
+export { TelegramMessage, TelegramClient as default };

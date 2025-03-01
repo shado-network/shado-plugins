@@ -34,8 +34,8 @@ class TelegramClient {
 
   //
 
-  _puppet: any
-  _context: any
+  _puppet: any // | ShadoPuppet
+  _context: any // | PuppetContext
 
   constructor(
     config: {},
@@ -44,8 +44,8 @@ class TelegramClient {
       botToken: string
       chatId?: string
     },
-    _puppet: any,
-    _context: any,
+    _puppet: any, // | ShadoPuppet,
+    _context: any, // | PuppetContext
   ) {
     this._context = _context
     this._puppet = _puppet
@@ -63,7 +63,7 @@ class TelegramClient {
     try {
       this.client = new Telegraf(this.secrets.botToken || 'UNDEFINED')
     } catch (error) {
-      this._context.logger.send({
+      this._context.utils.logger.send({
         type: 'ERROR',
         origin: {
           type: 'PUPPET',
@@ -156,3 +156,4 @@ class TelegramClient {
 
 export default TelegramClient
 export { fmt, code }
+export type { TelegramMessage }

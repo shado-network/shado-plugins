@@ -38,6 +38,7 @@ var __async = (__this, __arguments, generator) => {
 // src/index.ts
 import { ChatAnthropic } from "@langchain/anthropic";
 var AnthropicAdapter = class {
+  // | PuppetContext
   constructor(config, secrets, _puppet, _context) {
     this.config = {
       model: "claude-3-5-sonnet-20241022",
@@ -51,7 +52,7 @@ var AnthropicAdapter = class {
         { configurable: { thread_id: props.thread } }
       );
       if (!response || !response.messages || response.messages.length === 0) {
-        this._context.logger.send({
+        this._context.utils.logger.send({
           type: "WARNING",
           origin: {
             type: "SERVER"

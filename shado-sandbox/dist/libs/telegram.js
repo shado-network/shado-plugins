@@ -39,6 +39,7 @@ var __async = (__this, __arguments, generator) => {
 import TelegramClient from "@shado-network/client-telegram";
 import { fmt, code } from "@shado-network/client-telegram";
 var SandboxTelegramClient = class {
+  // | PuppetContext
   constructor(config, secrets, _context) {
     this.config = {};
     this._init = () => __async(this, null, function* () {
@@ -60,7 +61,7 @@ var SandboxTelegramClient = class {
           sandboxContext
         );
       } catch (error) {
-        this._context.logger.send({
+        this._context.utils.logger.send({
           type: "ERROR",
           origin: {
             type: "SERVER"

@@ -16,14 +16,15 @@ declare class TwitterApiClient {
     client: undefined | TwitterApi;
     threads: string[];
     messages: any[];
-    _context: any;
     _puppet: any;
+    _context: any;
     constructor(config: {}, secrets: {
         appKey: string;
         appSecret: string;
         accessToken: string;
         accessSecret: string;
-    }, _puppet: any, _context: any);
+    }, _puppet: any, // | ShadoPuppet,
+    _context: any);
     login: () => Promise<boolean>;
     getMessageThreads: () => string[];
     addMessageThread: (threadIdentifier: string) => void;

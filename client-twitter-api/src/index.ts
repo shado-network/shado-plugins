@@ -30,8 +30,8 @@ class TwitterApiClient {
 
   //
 
-  _context: any
-  _puppet: any
+  _puppet: any // | ShadoPuppet
+  _context: any // | PuppetContext
 
   constructor(
     config: {},
@@ -41,8 +41,8 @@ class TwitterApiClient {
       accessToken: string
       accessSecret: string
     },
-    _puppet: any,
-    _context: any,
+    _puppet: any, // | ShadoPuppet,
+    _context: any, // | PuppetContext,
   ) {
     this._context = _context
     this._puppet = _puppet
@@ -57,7 +57,7 @@ class TwitterApiClient {
       ...secrets,
     }
 
-    // this._context.logger.send({
+    // this._context.utils.logger.send({
     //   type: 'SUCCESS',
     //   origin: {
     //     type: 'PUPPET',
@@ -87,7 +87,7 @@ class TwitterApiClient {
 
       // this.client.login()
 
-      // this._context.logger.send({
+      // this._context.utils.logger.send({
       //   type: 'SUCCESS',
       //   origin: {
       //     type: 'PUPPET',
@@ -100,7 +100,7 @@ class TwitterApiClient {
 
       return true
     } catch (error) {
-      this._context.logger.send({
+      this._context.utils.logger.send({
         type: 'ERROR',
         origin: {
           type: 'PUPPET',

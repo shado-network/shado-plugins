@@ -18,7 +18,7 @@ class ShadoSandboxPlugin {
   }
 
   clients: any[] = []
-  _context: any
+  _context: any // | PuppetContext
 
   constructor(
     clientIdentifiers: string[],
@@ -27,14 +27,14 @@ class ShadoSandboxPlugin {
       botToken: string
       chatId: string
     },
-    _context: any,
+    _context: any, // | PuppetContext,
   ) {
     this.secrets = { ...secrets }
     this._context = _context
 
     this._setClients(clientIdentifiers)
 
-    this._context.logger.send({
+    this._context.utils.logger.send({
       type: 'SUCCESS',
       origin: {
         type: 'PLUGIN',
@@ -51,7 +51,7 @@ class ShadoSandboxPlugin {
         case 'shado-screen':
           break
         case 'logger':
-          this.clients.push(this._context.logger)
+          this.clients.push(this._context.utils.logger)
           break
         case 'telegram':
           this.clients.push(

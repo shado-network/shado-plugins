@@ -15,7 +15,7 @@ export class SandboxTelegramClient {
 
   client: any
 
-  _context: any
+  _context: any // | PuppetContext
 
   constructor(
     config: SandboxConfig,
@@ -24,7 +24,7 @@ export class SandboxTelegramClient {
       botToken: string
       chatId: string
     },
-    _context: any,
+    _context: any, // | PuppetContext,
   ) {
     this._context = _context
     this.config = { ...this.config, ...config }
@@ -56,7 +56,7 @@ export class SandboxTelegramClient {
         sandboxContext,
       )
     } catch (error) {
-      this._context.logger.send({
+      this._context.utils.logger.send({
         type: 'ERROR',
         origin: {
           type: 'SERVER',

@@ -26,16 +26,16 @@ class AnthropicAdapter {
 
   //
 
-  _puppet: any
-  _context: any
+  _puppet: any // | ShadoPuppet
+  _context: any // | PuppetContext
 
   constructor(
     config: {},
     secrets: {
       apiKey: string
     },
-    _puppet: any,
-    _context: any,
+    _puppet: any, // | ShadoPuppet,
+    _context: any, // | PuppetContext,
   ) {
     this._context = _context
     this._puppet = _puppet
@@ -59,7 +59,7 @@ class AnthropicAdapter {
     )
 
     if (!response || !response.messages || response.messages.length === 0) {
-      this._context.logger.send({
+      this._context.utils.logger.send({
         type: 'WARNING',
         origin: {
           type: 'SERVER',

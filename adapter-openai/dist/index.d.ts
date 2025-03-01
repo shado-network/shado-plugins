@@ -14,7 +14,8 @@ declare class OpenAiAdapter {
     _context: any;
     constructor(config: {}, secrets: {
         apiKey: string;
-    }, _puppet: any, _context: any);
+    }, _puppet: any, // | ShadoPuppet,
+    _context: any);
     getMessagesResponse: (messages: BaseLanguageModelInput, props: any) => Promise<any>;
 }
 
