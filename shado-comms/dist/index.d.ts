@@ -8,16 +8,20 @@ declare class ShadoComms {
         key: string;
     };
     config: {};
-    httpServer: undefined | FastifyInstance;
-    httpServerConfig: any;
-    httpServerSecrets: any;
-    wsServer: undefined | WebSocketServer;
-    wsServerConfig: any;
-    wsServerSecrets: any;
-    wsConnections: {
-        [key: string]: WebSocket;
+    http: {
+        server: undefined | FastifyInstance;
+        config: any;
+        secrets: any;
     };
-    _puppet: any;
+    ws: {
+        server: undefined | WebSocketServer;
+        config: any;
+        secrets: any;
+        connections: {
+            [key: string]: WebSocket;
+        };
+    };
+    _origin: any;
     _context: any;
     constructor(config: {
         http: {
@@ -26,8 +30,9 @@ declare class ShadoComms {
         ws: {
             port: number;
         };
-    }, _puppet: any, _context: any);
-    _init: () => Promise<void>;
+    }, _origin: any, // | ShadoPuppet | ShadoPlay,
+    _context: any);
+    _initHttpServer: () => Promise<void>;
     _defaultRouteError: (error: any) => {
         status: "error";
         timestamp: number;
@@ -37,6 +42,7 @@ declare class ShadoComms {
         };
     };
     _addHttpRoutes: () => void;
+    _initWebSocketServer: () => Promise<void>;
     _addWebSocketEvents: () => void;
 }
 

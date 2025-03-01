@@ -8,7 +8,7 @@ type HttpResponse = {
 };
 type WebSocketResponse = {
     timestamp: number;
-    source: string;
+    origin: string;
     data: {
         identifier: string;
         [key: string]: unknown;
