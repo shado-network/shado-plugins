@@ -126,7 +126,7 @@ class TwitterApiClient {
 
   sendMessage = async (message: string) => {
     if (this._context.config.sandboxMode) {
-      this._context.sandbox.send({
+      this._context.utils.sandbox.send({
         type: 'SANDBOX',
         origin: {
           type: 'PUPPET',
