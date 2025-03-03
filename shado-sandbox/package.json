@@ -10,12 +10,12 @@
     "watch": "tsup ./src --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@shado-network/client-telegram": "link:../../../../../../../Library/pnpm/global/5/node_modules/@shado-network/client-telegram"
-  },
   "devDependencies": {
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@shado-network/client-telegram": "^0.0.1"
   },
   "type": "module",
   "files": [
@@ -34,10 +34,5 @@
   "types": "./dist/index.d.ts",
   "publishConfig": {
     "access": "public"
-  },
-  "pnpm": {
-    "overrides": {
-      "@shado-network/client-telegram": "link:../../../../../../../Library/pnpm/global/5/node_modules/@shado-network/client-telegram"
-    }
   }
 }
