@@ -1,8 +1,5 @@
-import { LoggerMessage, LoggerConfig, LoggerClient } from './types/logger.js';
-
-type AbstractLoggerClient = {
-    send: (loggerMessage: LoggerMessage) => void;
-};
+import { LoggerConfig, LoggerClient, LoggerMessage } from './types/logger.js';
+import { AbstractLoggerClient } from './types/abstract.js';
 
 declare class ShadoLogger {
     static metadata: {
