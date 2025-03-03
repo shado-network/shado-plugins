@@ -1,0 +1,40 @@
+{
+  "name": "@shado-network/shado-planner-htn",
+  "description": "Shadō Network's hierarchical task network planner.",
+  "keywords": [],
+  "version": "0.0.1",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsup ./src",
+    "watch": "tsup ./src --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.40",
+    "langchain": "^0.3.19"
+  }
+}
