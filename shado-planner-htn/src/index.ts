@@ -1,19 +1,15 @@
 import path from 'path'
-import { dirname } from 'path'
-import { fileURLToPath } from 'url'
 
 import { tasksPool } from './tasks/index.js'
 import { defaultStates } from './states/index.js'
 import { plannerLoop } from './libs/planner.loop.js'
 import { importTasks } from './libs/utils.tasks.js'
+import { getCurrent } from './libs/utils.js'
 
 // import type { AppContext } from '@core/context/types'
 // import type { PuppetInstance } from '@core/puppet/types'
 // import type { AbstractPlugin } from '@core/abstract/types'
 import type { HtnTask } from './types/planner.js'
-
-// const __filename = fileURLToPath(import.meta.url)
-// const __dirname = dirname(__filename)
 
 class ShadoPlannerHTN {
   static metadata = {
@@ -62,11 +58,8 @@ class ShadoPlannerHTN {
       }
     } = {}
 
-    // TODO: !!!!
     // const imports: HtnTask[] = []
-    const __dirname =
-      '/Users/reffan/Desktop/O U T L I E R/Projects/20241123 - Shado Network/dev/shado-plugins/shado-planner-htn/src'
-    const tasksPath = path.join(__dirname, 'tasks')
+    const tasksPath = path.join(getCurrent(import.meta.url).dirname, 'tasks')
     const imports = await importTasks(tasksPath)
 
     imports.forEach((importedTask) => {

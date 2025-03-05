@@ -11,8 +11,6 @@ export const importTasks = async (tasksPath: string) => {
     recursive: true,
   }) as string[]
 
-  console.log('!!!', { files })
-
   await asyncForEach(files, async (file: string) => {
     if (!file.endsWith('.js') && !file.endsWith('.ts')) {
       return
