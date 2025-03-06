@@ -1,9 +1,1 @@
-// src/libs/shado-screen.ts
-var ShadoScreenClient = class {
-  constructor(config) {
-    this.config = config;
-  }
-};
-export {
-  ShadoScreenClient
-};
+var g=class{config;constructor(o){this.config=o;}};export{g as ShadoScreenClient};

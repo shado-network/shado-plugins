@@ -1,18 +1,1 @@
-// src/tasks/index.ts
-var tasksPool = (_origin, _tasks) => {
-  const pool = [];
-  const clientsArray = _origin._register.clients.forEach((client) => {
-    try {
-      pool.push(
-        ...Object.values(
-          _tasks[client.plugin.metadata.key]
-        )
-      );
-    } catch (error) {
-    }
-  });
-  return pool;
-};
-export {
-  tasksPool
-};
+var o=(s,a)=>{let t=[];s._register.clients.forEach(n=>{try{t.push(...Object.values(a[n.plugin.metadata.key]));}catch{}});return t};export{o as tasksPool};

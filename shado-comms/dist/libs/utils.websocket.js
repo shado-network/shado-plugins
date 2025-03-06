@@ -1,9 +1,1 @@
-// src/libs/utils.websocket.ts
-var broadcast = (clients, data, isBinary) => {
-  Object.keys(clients).forEach((clientId) => {
-    clients[clientId].send(data, { binary: isBinary });
-  });
-};
-export {
-  broadcast
-};
+var a=(e,o,t)=>{Object.keys(e).forEach(r=>{e[r].send(o,{binary:t});});};export{a as broadcast};

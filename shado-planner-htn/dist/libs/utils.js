@@ -1,0 +1,1 @@
+import n from'path';import {fileURLToPath}from'url';var a=t=>{let r=fileURLToPath(t),e=n.dirname(r);return {filename:r,dirname:e}};export{a as getCurrent};

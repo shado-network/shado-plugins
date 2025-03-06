@@ -6,15 +6,16 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build": "tsup ./src",
+    "build": "npm run clean && tsup ./src",
     "watch": "tsup ./src --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf ./dist"
   },
   "dependencies": {
     "telegraf": "^4.16.3"
   },
   "devDependencies": {
-    "@types/node": "^22.13.5",
+    "@types/node": "^22.13.9",
+    "rimraf": "^6.0.1",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   },

@@ -6,9 +6,9 @@
   "author": "Shadō Network",
   "license": "ISC",
   "scripts": {
-    "build": "tsup ./src",
+    "build": "npm run clean && tsup ./src",
     "watch": "tsup ./src --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf ./dist"
   },
   "dependencies": {
     "@fastify/cors": "^10.1.0",
@@ -17,7 +17,9 @@
     "ws": "^8.18.1"
   },
   "devDependencies": {
+    "@types/node": "^22.13.9",
     "@types/ws": "^8.5.14",
+    "rimraf": "^6.0.1",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   },
