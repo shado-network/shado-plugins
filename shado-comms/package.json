@@ -2,7 +2,7 @@
   "name": "@shado-network/shado-comms",
   "description": "Shadō Network's intra-communication utility.",
   "keywords": [],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Shadō Network",
   "license": "UNLICENSED",
   "scripts": {

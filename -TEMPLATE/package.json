@@ -2,7 +2,7 @@
   "name": "@shado-network/TEMPLATE",
   "description": "Template plugin for Shadō Network packages.",
   "keywords": [],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "",
   "license": "UNLICENSED",
   "scripts": {

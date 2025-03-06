@@ -2,7 +2,7 @@
   "name": "@shado-network/adapter-anthropic",
   "description": "Wrapper for Anthropic API interaction through LangChain.",
   "keywords": [],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "",
   "license": "UNLICENSED",
   "scripts": {
