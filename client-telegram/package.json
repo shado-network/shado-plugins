@@ -4,7 +4,7 @@
   "keywords": [],
   "version": "0.0.1",
   "author": "",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "npm run clean && tsup ./src",
     "watch": "tsup ./src --watch",
